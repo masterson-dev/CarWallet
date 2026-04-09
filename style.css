@@ -1,0 +1,146 @@
+/* ===============================
+   CarWallet - style.css
+   Estilo unificado (Mobile First)
+=================================*/
+
+:root {
+  --azul: #007bff;
+  --azul-escuro: #0056b3;
+  --fundo: #f8f9fa;
+  --texto: #212529;
+  --cartao: #ffffff;
+  --borda: #dcdcdc;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+  background-color: var(--fundo);
+  color: var(--texto);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+header img.logo, img.logo {
+  width: 120px !important;
+  max-width: 120px !important;
+  height: auto !important;
+  display: block !important;
+  margin: 0 auto 10px auto !important;
+  object-fit: contain !important;
+}
+
+.container {
+  background-color: var(--cartao);
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.info-veiculo {
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto 15px auto;
+  background-color: var(--azul);
+  color: #fff;
+  padding: 10px;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  gap: 12px;
+}
+
+label { font-weight: bold; margin-bottom: 3px; }
+
+input, select {
+  padding: 10px;
+  border: 1px solid var(--borda);
+  border-radius: 5px;
+  font-size: 16px;
+  width: 100%;
+}
+
+input:focus, select:focus {
+  border-color: var(--azul);
+  outline: none;
+}
+
+/* Campos dinâmicos da Solução do Odômetro */
+.campos-combustivel {
+  display: none; 
+  flex-direction: column;
+  gap: 12px;
+  background-color: #f1f8ff;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px dashed var(--azul);
+}
+
+.campos-combustivel.visivel {
+  display: flex;
+}
+
+.botao {
+  background-color: var(--azul);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 14px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.botao:hover { background-color: var(--azul-escuro); }
+
+.botao-voltar {
+  background-color: #6c757d;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 14px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.botoes {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 15px;
+  flex-wrap: wrap;
+}
+
+.tabela-veiculos {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.tabela-veiculos th { background-color: var(--azul); color: #fff; padding: 8px; }
+.tabela-veiculos td { background-color: #f9f9f9; padding: 8px; border-bottom: 1px solid #ddd; }
+.container-tabela { max-height: 400px; overflow-y: auto; border: 1px solid #ccc; border-radius: 8px; margin-top: 15px;}
+
+footer { margin-top: auto; font-size: 13px; color: gray; padding: 15px 0; }
