@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Acesso - CarWallet</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Estilo específico para centralizar o box de login na tela inteira */
+    body.tela-login {
+      justify-content: center;
+      background-color: var(--azul); /* Fundo azul para destacar o login */
+    }
+    .container-login {
+      background-color: var(--cartao);
+      padding: 40px 30px;
+      border-radius: 12px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+      width: 90%;
+      max-width: 400px;
+      text-align: center;
+    }
+    .container-login img.logo {
+      margin-bottom: 30px !important;
+    }
+  </style>
+</head>
+<body class="tela-login">
+
+  <div class="container-login">
+    <img src="img/logo.png" alt="CarWallet Logo" class="logo" />
+    
+    <h2 style="margin-bottom: 20px; color: var(--texto);">Bem-vindo</h2>
+    
+    <form id="loginForm">
+      <input type="email" id="emailLogin" placeholder="E-mail" required />
+      <input type="password" id="senhaLogin" placeholder="Senha" required />
+      
+      <button type="submit" class="botao" style="margin-top: 10px; width: 100%;">Entrar</button>
+    </form>
+    
+    <p style="margin-top: 20px; font-size: 14px; color: gray;">
+      Ainda não tem conta? <a href="#" style="color: var(--azul); font-weight: bold;">Cadastre-se</a>
+    </p>
+  </div>
+
+  <script>
+    // Lógica super simples apenas para simular o fluxo para o professor
+    document.getElementById('loginForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      // O Login aceita qualquer coisa no MVP, apenas para redirecionar
+      window.location.href = 'relatorios.html';
+    });
+  </script>
+</body>
+</html>
