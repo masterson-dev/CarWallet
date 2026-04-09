@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Registrar Despesa - CarWallet</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header><img src="img/logo.png" alt="CarWallet Logo" class="logo" /></header>
+
+  <div class="container">
+    <div class="info-veiculo" id="infoPlacaDespesa">Veículo: </div>
+    <h1>Registrar Despesa</h1>
+
+    <form id="formDespesa">
+      <label for="tipoDespesa">Tipo de Despesa:</label>
+      <select id="tipoDespesa" required>
+        <option value="">Selecione a categoria</option>
+        <option value="Combustível">Combustível</option>
+        <option value="Manutenção">Manutenção</option>
+        <option value="Seguro">Seguro</option>
+        <option value="Imposto">Imposto / Taxas</option>
+        <option value="Estacionamento">Estacionamento</option>
+        <option value="Outros">Outros</option>
+      </select>
+
+      <div id="blocoCombustivel" class="campos-combustivel">
+        <label for="odometro">Odômetro Atual (Km do painel):</label>
+        <input id="odometro" type="number" step="1" placeholder="Ex: 45000" />
+
+        <label for="litros">Litros Abastecidos:</label>
+        <input id="litros" type="number" step="0.1" placeholder="Ex: 40.5" />
+      </div>
+
+      <label for="descricao">Descrição (Opcional):</label>
+      <input id="descricao" type="text" placeholder="Ex: Posto Ipiranga, Troca de óleo..." />
+
+      <label for="valor">Valor Total Pago (R$):</label>
+      <input id="valor" type="number" step="0.01" required />
+
+      <label for="data">Data:</label>
+      <input id="data" type="date" required />
+
+      <div class="botoes">
+        <button type="submit" class="botao">Salvar Registro</button>
+        <button type="button" class="botao-voltar" onclick="window.location.href='relatorios.html'">Cancelar</button>
+      </div>
+    </form>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
