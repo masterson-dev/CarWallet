@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Novo Veículo - CarWallet</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header><img src="img/logo.png" alt="CarWallet Logo" class="logo" /></header>
+
+  <div class="container">
+    <h1>Novo Veículo</h1>
+    <form id="veiculoForm">
+      <label for="marca">Marca:</label>
+      <input type="text" id="marca" placeholder="Ex: Honda" required />
+
+      <label for="modelo">Modelo:</label>
+      <input type="text" id="modelo" placeholder="Ex: Civic" required />
+
+      <label for="ano">Ano:</label>
+      <input type="number" id="ano" required />
+
+      <label for="placa">Placa:</label>
+      <input type="text" id="placa" placeholder="ABC-1234" required />
+
+      <label for="combustivel">Combustível Principal:</label>
+      <select id="combustivel" required>
+        <option value="">Selecione</option>
+        <option value="Gasolina">Gasolina</option>
+        <option value="Álcool">Álcool</option>
+        <option value="Flex">Flex</option>
+        <option value="Diesel">Diesel</option>
+      </select>
+
+      <div class="botoes">
+        <button type="submit" class="botao">Salvar Veículo</button>
+        <button type="button" class="botao-voltar" onclick="window.location.href='relatorios.html'">Cancelar</button>
+      </div>
+    </form>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
