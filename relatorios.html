@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Meus Veículos - CarWallet</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <img src="img/logo.png" alt="CarWallet Logo" class="logo" />
+  </header>
+
+  <main class="container">
+    <h1>Meus Veículos</h1>
+
+    <div style="text-align:center; margin-bottom:12px;">
+      <button class="botao" onclick="window.location.href='cadastro_veiculo.html'">Cadastrar Novo Veículo</button>
+    </div>
+
+    <div class="container-tabela">
+      <table id="tabelaRelatorios" class="tabela-veiculos">
+        <thead>
+          <tr>
+            <th>Marca/Modelo</th>
+            <th>Placa</th>
+            <th>Combustível</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody id="tabelaRelatoriosBody">
+        </tbody>
+      </table>
+    </div>
+  </main>
+
+  <footer>CarWallet © 2026</footer>
+  <script src="script.js"></script>
+</body>
+</html>
